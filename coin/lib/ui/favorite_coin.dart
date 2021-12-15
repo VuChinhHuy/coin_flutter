@@ -48,7 +48,7 @@ class _FavoriteCoinState extends State<FavoriteCoin> {
             }
             listAll = snapshot.data!.listCoin;
             for (var e in list) {
-              listCoinFavorite = listAll.where((element) => element.id! == e.id).toList();
+              listCoinFavorite.addAll(listAll.where((element) => element.id! == e.id));
             };
             return Container(
               padding: EdgeInsets.only(left: 8.w,right: 8.w,top: 10.w),
